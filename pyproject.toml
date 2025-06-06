@@ -1,7 +1,7 @@
 [project]
-name = "synestro1"
+name = "synestro"
 version = "0.1.0"
-description = "vie"
+
 requires-python = ">=3.11"
 dependencies = [
     "numpy>=2.2.6",
