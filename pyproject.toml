@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+backend-path = ["."]
+[project]
+name = "synestro"
+# ... (le reste de votre fichier [project] reste inchangé) ...
+dependencies = [
+    "numpy>=2.2.6",
+    "pandas>=2.3.0",
+    "plotly>=6.1.2",
+    "scikit-learn>=1.6.1",
+    "seaborn>=0.13.2",
+    "streamlit>=1.45.1",
+]
