@@ -2,8 +2,8 @@
 headless = false
 port = 8501
 enableCORS = true
-enableWebsocketReconnects = true
-enableCORSForLocalhost = false
+
+
 
 [theme]
 primaryColor = "#FFCC00"
