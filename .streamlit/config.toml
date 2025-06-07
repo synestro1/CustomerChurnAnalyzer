@@ -8,3 +8,6 @@ primaryColor = "#FFCC00"
 backgroundColor = "#FFFFFF"
 secondaryBackgroundColor = "#F0F0F0"
 textColor = "#000000"
+
+[auth]
+enabled = false
