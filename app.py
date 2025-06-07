@@ -36,6 +36,21 @@ st.markdown(
         border: 1px solid #FFCC00;
         margin: 1rem 0;
     }
+    .insight-box h4.insight-title {
+    color: #4A80A9; 
+    }
+
+.insight-box p {
+    color: #6082A0;
+    font-size: 0.9rem;
+    }
+
+.insight-box ul {
+    color: #6082A0;
+    }
+
+.insight-box li {
+    color: #6082A0;}
 </style>
 """,
     unsafe_allow_html=True,
@@ -98,7 +113,7 @@ def main():
                 st.markdown(
                     """
                 <div class="insight-box">
-                    <h4>🔍 Churn Analysis</h4>
+                    <h4 class="insight-title">🔍 Churn Analysis</h4>
                     <p>Mon analyse révèle des schémas clés dans le comportement de désabonnement des clients, ce qui permet d'identifier les segments à risque et les opportunités de fidélisation.</p>
                     <ul>
                         <li>Il existe une forte Lien entre la satisfaction du client et la fidélisation</li>
@@ -114,7 +129,7 @@ def main():
                 st.markdown(
                     """
                 <div class="insight-box">
-                    <h4>📈 Business Impact</h4>
+                    <h4 class="insight-title">📈 Business Impact</h4>
                     <p>La compréhension des schémas de désabonnement permet de mettre en place des stratégies proactives de fidélisation de la clientèle et de protection des revenus.</p>
                     <ul>
                         <li>Impact sur le chiffre d'affaires de la perte de clients</li>

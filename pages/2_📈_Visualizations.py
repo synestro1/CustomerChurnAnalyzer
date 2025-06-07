@@ -347,22 +347,22 @@ try:
             
             with col1:
                 st.info("""
-                **Key Patterns Observed:**
-                - Customer satisfaction shows strong inverse correlation with churn
-                - Revenue per month is a strong predictor of retention
-                - New customers with high revenue are at highest risk
-                - Device type affects revenue efficiency significantly
-                - Geographic clustering of churn suggests network quality issues
+                **Principaux modèles observés :**
+                - La satisfaction des clients montre une forte corrélation inverse avec le désabonnement
+                - Le revenu par mois est un fort prédicteur de la fidélisation
+                - Les nouveaux clients à revenu élevé sont les plus exposés au risque
+                - Le type d'appareil affecte considérablement l'efficacité des revenus
+                - Le regroupement géographique des désabonnements suggère des problèmes de qualité du réseau
                 """)
             
             with col2:
                 st.success("""
-                **Actionable Insights:**
-                - Focus retention on high-risk score customers (score ≥ 4)
-                - Target new customers with personalized onboarding
-                - Optimize data plans for better revenue efficiency
-                - Address network quality in high-churn states
-                - Implement satisfaction monitoring for early intervention
+                **Insights exploitables :**
+                - Concentrer la fidélisation sur les clients à haut risque (score ≥ 4)
+                - Cibler les nouveaux clients avec un onboarding personnalisé
+                - Optimiser les plans de données pour une meilleure efficacité des revenus
+                - Aborder la qualité du réseau dans les états à fort taux de désabonnement
+                - Mettre en œuvre un suivi de la satisfaction pour une intervention précoce
                 """)
     
     else:

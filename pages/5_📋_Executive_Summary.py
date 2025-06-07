@@ -29,6 +29,20 @@ st.markdown("""
         border-left: 4px solid #FFCC00;
         margin: 1rem 0;
     }
+    .key-finding h4.insight-title {
+    color: #4A80A9; /* Bleu principal pour le titre (inspiré de "Enhanced Visualizations") */
+    }
+
+    .key-finding p {
+    color: #6082A0;
+    }
+    .key-finding ul {
+    color: #6082A0;
+    }
+
+    .key-finding li {
+    color: #6082A0;
+    }        
     .recommendation-box {
         background-color: #F0F8F0;
         padding: 1rem;
@@ -49,7 +63,7 @@ st.markdown("""
 st.markdown("""
 <div class="executive-header">
     <h1>📋 Executive Summary</h1>
-    <p>MTN Nigeria Customer Churn Analysis - Strategic Insights & Recommendations</p>
+    <p>Analyse du taux d'attrition des clients de MTN Nigeria - Perspectives et recommandations stratégiques</p>
 </div>
 """, unsafe_allow_html=True)
 
@@ -127,24 +141,24 @@ try:
         with col1:
             st.markdown("""
             <div class="key-finding">
-                <h4>💡 Critical Discovery: Customer Lifecycle Risk</h4>
-                <p><strong>New customers with high revenue are at highest churn risk.</strong></p>
+                <h4 class="insight-title">💡 Découverte critique : Risque lié au cycle de vie du client</h4>
+                <p><strong>Les nouveaux clients à revenu élevé sont les plus exposés au risque de désabonnement.</strong></p>
                 <ul>
                     <li>Customers with <12 months tenure show 35%+ churn rates</li>
-                    <li>High-value new customers need immediate attention</li>
-                    <li>First-year retention programs are critical</li>
+                    <li>Les nouveaux clients à forte valeur ajoutée doivent faire l'objet d'une attention immédiate</li>
+                    <li>Les programmes de fidélisation de la première année sont essentiels</li>
                 </ul>
             </div>
             """, unsafe_allow_html=True)
             
             st.markdown("""
             <div class="key-finding">
-                <h4>📊 Revenue Impact Analysis</h4>
-                <p><strong>Churned customers generate significantly lower monthly revenue.</strong></p>
+                <h4 class="insight-title">📊 Revenue Impact Analysis</h4>
+                <p><strong>Les clients désabonnés génèrent des revenus mensuels nettement inférieurs.</strong></p>
                 <ul>
-                    <li>Average monthly revenue gap: ₦{:,.0f}</li>
-                    <li>Revenue efficiency varies by device type</li>
-                    <li>Data usage patterns predict churn likelihood</li>
+                    <li>Écart moyen de revenus mensuels : ₦{:,.0f}</li>
+                    <li>L'efficacité des revenus varie selon le type d'appareil</li>
+                    <li>Les modèles d'utilisation des données prédisent la probabilité de désabonnement</li>
                 </ul>
             </div>
             """.format(
@@ -155,24 +169,24 @@ try:
         with col2:
             st.markdown(f"""
             <div class="key-finding">
-                <h4>🎪 Primary Churn Drivers</h4>
-                <p><strong>Top reason: {insights['top_churn_reason']}</strong></p>
+                <h4 class="insight-title">🎪 Principaux facteurs de désabonnement</h4>
+                <p><strong>Raison principale : {insights['top_churn_reason']}</strong></p>
                 <ul>
-                    <li>Network quality issues drive significant churn</li>
-                    <li>Competitive offers pose major threat</li>
-                    <li>Customer satisfaction strongly correlates with retention</li>
+                    <li>Les problèmes de qualité du réseau entraînent un désabonnement significatif</li>
+                    <li>Les offres concurrentielles représentent une menace majeure</li>
+                    <li>La satisfaction des clients est fortement corrélée à la fidélisation</li>
                 </ul>
             </div>
             """, unsafe_allow_html=True)
             
             st.markdown(f"""
             <div class="key-finding">
-                <h4>🗺️ Geographic Patterns</h4>
-                <p><strong>{len(insights['high_churn_states'])} states show above-average churn rates.</strong></p>
+                <h4 class="insight-title">🗺️ Modèles géographiques</h4>
+                <p><strong>{len(insights['high_churn_states'])} états présentent des taux de désabonnement supérieurs à la moyenne.</strong></p>
                 <ul>
-                    <li>Regional network quality variations</li>
-                    <li>Local competitive pressures</li>
-                    <li>State-specific intervention opportunities</li>
+                    <li>Variations régionales de la qualité du réseau</li>
+                    <li>Pressions concurrentielles locales</li>
+                    <li>Opportunités d'intervention spécifiques à l'état</li>
                 </ul>
             </div>
             """, unsafe_allow_html=True)
@@ -185,12 +199,12 @@ try:
         with col1:
             st.markdown("""
             <div class="key-finding">
-                <h4>🎯 Model Accuracy</h4>
-                <p><strong>Best performing models achieve 70-75% accuracy</strong></p>
+                <h4 class="insight-title">🎯 Précision du modèle</h4>
+                <p><strong>Les meilleurs modèles atteignent une précision de 70 à 75 %</strong></p>
                 <ul>
-                    <li>Random Forest: Highest accuracy</li>
-                    <li>Logistic Regression: Best interpretability</li>
-                    <li>Feature importance reveals key predictors</li>
+                    <li>Random Forest : Précision la plus élevée</li>
+                    <li>Régression logistique : Meilleure interprétabilité</li>
+                    <li>L'importance des caractéristiques révèle les principaux prédicteurs</li>
                 </ul>
             </div>
             """, unsafe_allow_html=True)
@@ -198,7 +212,7 @@ try:
         with col2:
             st.markdown("""
             <div class="key-finding">
-                <h4>📈 Predictive Features</h4>
+                <h4 class="insight-title">📈 Predictive Features</h4>
                 <p><strong>Top predictors identified:</strong></p>
                 <ul>
                     <li>Customer tenure (months)</li>
@@ -212,12 +226,12 @@ try:
         with col3:
             st.markdown("""
             <div class="key-finding">
-                <h4>🎪 Business Value</h4>
+                <h4 class="insight-title">🎪 Valeur de l'entreprise</h4>
                 <p><strong>ML-enhanced targeting can improve ROI by 40%+</strong></p>
                 <ul>
-                    <li>Early intervention opportunities</li>
-                    <li>Personalized retention strategies</li>
-                    <li>Resource optimization</li>
+                    <li>Opportunités d'intervention précoce</li>
+                    <li>Stratégies de fidélisation personnalisées</li>
+                    <li>Optimisation des ressources</li>
                 </ul>
             </div>
             """, unsafe_allow_html=True)
@@ -228,60 +242,43 @@ try:
         col1, col2 = st.columns(2)
         
         with col1:
-            st.markdown("""
-            <div class="recommendation-box">
-                <h4>🎯 Immediate Actions (0-3 months)</h4>
-                
-                <p><strong>1. New Customer Onboarding Program</strong></p>
-                <ul>
-                    <li>Implement 90-day intensive support for new high-value customers</li>
-                    <li>Dedicated relationship managers for revenue >₦100,000</li>
-                    <li>Proactive satisfaction monitoring</li>
-                </ul>
-                
-                <p><strong>2. Network Quality Intervention</strong></p>
-                <ul>
-                    <li>Priority infrastructure investment in high-churn states</li>
-                    <li>Emergency response teams for network issues</li>
-                    <li>Quality monitoring dashboard</li>
-                </ul>
-                
-                <p><strong>3. Competitive Response Strategy</strong></p>
-                <ul>
-                    <li>Price benchmarking and adjustment framework</li>
-                    <li>Retention offers for at-risk customers</li>
-                    <li>Value-added services differentiation</li>
-                </ul>
-            </div>
-            """, unsafe_allow_html=True)
+            st.info("""
+            **🎯 Immediate Actions (0-3 months)**
+            **1. Programme d'accueil des nouveaux clients**
+            - Mettre en œuvre un soutien intensif de 90 jours pour les nouveaux clients à forte valeur ajoutée
+            - Responsables de compte dédiés pour les revenus >₦100,000
+            - Suivi proactif de la satisfaction
+
+            **2. Intervention sur la qualité du réseau**
+            - Investissement prioritaire dans l'infrastructure des états à fort taux de désabonnement
+            - Équipes d'intervention d'urgence pour les problèmes de réseau
+            - Tableau de bord de surveillance de la qualité
+
+            **3. Stratégie de réponse concurrentielle**
+            - Cadre d'ajustement et de comparaison des prix
+            - Retention offers for at-risk customers
+            - Value-added services differentiation
+            """)
         
         with col2:
-            st.markdown("""
-            <div class="recommendation-box">
-                <h4>📈 Strategic Initiatives (3-12 months)</h4>
-                
-                <p><strong>1. Predictive Analytics Deployment</strong></p>
-                <ul>
-                    <li>Deploy ML models for real-time churn prediction</li>
-                    <li>Automated early warning system</li>
-                    <li>Personalized intervention triggers</li>
-                </ul>
-                
-                <p><strong>2. Customer Lifecycle Optimization</strong></p>
-                <ul>
-                    <li>Lifecycle-based service offerings</li>
-                    <li>Graduated loyalty programs</li>
-                    <li>Tenure-based pricing advantages</li>
-                </ul>
-                
-                <p><strong>3. Data-Driven Service Design</strong></p>
-                <ul>
-                    <li>Revenue efficiency optimization</li>
-                    <li>Device-specific service packages</li>
-                    <li>Usage pattern-based recommendations</li>
-                </ul>
-            </div>
-            """, unsafe_allow_html=True)
+            st.success("""
+            **📈 Strategic Initiatives (3-12 months)**
+            
+            **1. Déploiement de l'analyse prédictive**
+           - Déployer des modèles d'IA pour la prédiction en temps réel du désabonnement
+            - Système d'alerte précoce automatisé
+            - Déclencheurs d'intervention personnalisés
+
+            **2. Optimisation du cycle de vie client**
+            - Offres de services basées sur le cycle de vie
+            - Programmes de fidélité gradués
+            - Avantages tarifaires basés sur l'ancienneté
+
+            **3. Conception de services basée sur les données**
+            - Optimisation de l'efficacité des revenus
+            - Offres de services spécifiques aux appareils
+            - Recommandations basées sur les modèles d'utilisation
+            """)
         
         # Risk Assessment and Monitoring
         st.header("⚠️ Risk Assessment & Monitoring Framework")
@@ -319,25 +316,21 @@ try:
             high_risk_customers = len(df[df['Risk_Score'] >= 4])
             high_risk_revenue = df[df['Risk_Score'] >= 4]['Total Revenue'].sum()
             
-            st.markdown(f"""
-            <div class="risk-alert">
-                <h4>🚨 High-Risk Customer Alert</h4>
-                <p><strong>{high_risk_customers:,} customers at immediate risk</strong></p>
-                <ul>
-                    <li>Revenue at stake: ₦{high_risk_revenue:,.0f}</li>
-                    <li>Require immediate intervention</li>
-                    <li>Predicted churn probability: >60%</li>
-                </ul>
-                
-                <p><strong>Monitoring KPIs:</strong></p>
-                <ul>
-                    <li>Weekly satisfaction scores</li>
-                    <li>Monthly churn rate tracking</li>
-                    <li>Intervention success rates</li>
-                    <li>Revenue recovery metrics</li>
-                </ul>
-            </div>
-            """, unsafe_allow_html=True)
+            st.error(f"""
+            🚨 **Alerte aux clients à haut risque**
+
+            **{high_risk_customers:,} clients à risque immédiat**
+
+            • Revenus en jeu : ₦{high_risk_revenue:,.0f}
+            • Nécessitent une intervention immédiate
+            • Probabilité de désabonnement prévue : >60%
+
+            **KPI de suivi :**
+            • Scores de satisfaction hebdomadaires
+            • Suivi mensuel du taux de désabonnement
+            • Taux de réussite des interventions
+            • Métriques de récupération des revenus
+            """)
         
         # Implementation Roadmap
         st.header("🗓️ Implementation Roadmap")
@@ -361,23 +354,17 @@ try:
         # Executive Summary Conclusion
         st.header("📋 Executive Summary")
         
-        st.markdown(f"""
-        <div class="executive-header">
-            <h3>Key Takeaways for Leadership</h3>
-            
-            <p><strong>Current State:</strong> MTN Nigeria faces a {churn_rate:.1f}% customer churn rate, 
-            representing ₦{churned_revenue:,.0f} in lost revenue annually.</p>
-            
-            <p><strong>Root Causes:</strong> Network quality issues, competitive pressure, and inadequate 
-            new customer onboarding are primary drivers.</p>
-            
-            <p><strong>Opportunity:</strong> With targeted interventions, we can recover ₦{potential_savings:,.0f} 
-            in revenue through improved retention.</p>
-            
-            <p><strong>Next Steps:</strong> Immediate deployment of new customer programs and ML-based 
-            prediction systems will deliver measurable ROI within 90 days.</p>
-        </div>
-        """, unsafe_allow_html=True)
+        st.success(f"""
+        ### Principaux enseignements pour les dirigeants
+
+        **État actuel :** MTN Nigeria fait face à un taux de désabonnement de {churn_rate:.1f} %, représentant ₦{churned_revenue:,.0f} de revenus perdus chaque année.
+
+        **Causes profondes :** Les problèmes de qualité du réseau, la pression concurrentielle et l'intégration insuffisante des nouveaux clients sont des moteurs principaux.
+
+        **Opportunité :** Avec des interventions ciblées, nous pouvons récupérer ₦{potential_savings:,.0f} de revenus grâce à une meilleure fidélisation.
+
+        **Prochaines étapes :** Le déploiement immédiat de nouveaux programmes pour les clients et de systèmes de prédiction basés sur l'IA permettra d'obtenir un retour sur investissement mesurable dans les 90 jours.
+        """)
         
     else:
         st.error("No data available for executive summary.")

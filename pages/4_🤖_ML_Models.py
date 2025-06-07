@@ -30,18 +30,26 @@ st.markdown("---")
 st.markdown("""
 <style>
     .model-card {
-        background-color: #F8F9FA;
-        padding: 1rem;
-        border-radius: 8px;
-        border-left: 4px solid #FFCC00;
-        margin: 0.5rem 0;
+    background-color: #FFF9E6;
+    padding: 1rem;             
+    border-radius: 8px;        
+    border-left: 4px solid #F8F9FA;
+    margin: 0.5rem 0;          
+    color: #6082A0;            
     }
-    .metric-highlight {
-        background-color: #FFF9E6;
-        padding: 0.5rem;
-        border-radius: 4px;
-        text-align: center;
-        font-weight: bold;
+
+    .model-card h4 {
+    color: #4A80A9;           
+    margin-bottom: 0.75rem;   
+    }
+
+    .model-card .metric-highlight {
+    background-color: #FFF9E6; 
+    padding: 0.5rem;          
+    border-radius: 4px;      
+    text-align: center;       
+    font-weight: bold;        
+    color: #4A80A9;                                                                     
     }
 </style>
 """, unsafe_allow_html=True)
@@ -174,8 +182,8 @@ try:
         
         # Best model highlight
         best_model = comparison_df.iloc[0]
-        st.success(f"🏆 Best Performing Model: **{best_model['Model']}** with {best_model['Accuracy']:.1%} accuracy")
-        
+        st.success(f"🏆 Modèle le plus performant: **{best_model['Model']}** avec {best_model['Accuracy']:.1%} de précision")
+
         # Detailed model analysis
         st.subheader("🔍 Detailed Model Analysis")
         
@@ -261,33 +269,32 @@ try:
         col1, col2 = st.columns(2)
         
         with col1:
-            st.markdown("""
-            ### 🎯 Key ML Findings
+            st.info("""
+            ### 🎯 Principales conclusions du ML
             
             **Model Performance:**
-            - Most models achieve 70-75% accuracy
-            - Random Forest and Logistic Regression show consistent performance
-            - Tree-based models provide interpretable feature importance
-            
+            - La plupart des modèles atteignent une précision de 70 à 75 %.
+            - La forêt aléatoire et la régression logistique affichent des performances constantes.
+            - Les modèles arborescents permettent d'interpréter l'importance des caractéristiques
             **Class Imbalance Impact:**
-            - Churn class (minority) is harder to predict
-            - Precision-Recall trade-off is important
-            - Consider cost-sensitive learning for business impact
+            - Churn class (minorité) est plus difficile à prédire
+            - Le compromis précision-rappel est important
+            - Envisagez l'apprentissage sensible aux coûts pour l'impact commercial
             """)
-        
+
         with col2:
-            st.markdown("""
+            st.info("""
             ### 🚀 Business Applications
             
-            **Predictive Targeting:**
-            - Deploy models for real-time churn prediction
-            - Focus retention efforts on high-risk customers
-            - Automate early warning systems
-            
-            **Strategic Insights:**
-            - Revenue per month is a strong predictor
-            - Customer tenure strongly influences retention
-            - Device type and subscription plans matter
+            **Ciblage prédictif :**
+           - Déployer des modèles pour la prédiction en temps réel du désabonnement
+            - Concentrer les efforts de fidélisation sur les clients à haut risque
+            - Automatiser les systèmes d'alerte précoce
+
+            **Insights stratégiques :**
+            - Revenu par mois est un fort prédicteur
+            - La durée de vie du client influence fortement la fidélisation
+            - Le type d'appareil et les plans d'abonnement sont importants
             """)
         
         # Advanced analytics section
@@ -371,17 +378,17 @@ try:
             )
         
         # Export model results
-        st.header("📤 Model Export & Deployment")
+        # st.header("📤 Model Export & Deployment")
         
-        st.info("""
-        **Model Deployment Recommendations:**
+        # st.info("""
+        # **Model Deployment Recommendations:**
         
-        1. **Production Pipeline:** Implement the Random Forest or Logistic Regression model
-        2. **Real-time Scoring:** Set up API endpoints for live customer scoring
-        3. **Batch Processing:** Schedule regular model updates and customer risk scoring
-        4. **Monitoring:** Track model performance and data drift over time
-        5. **A/B Testing:** Test intervention strategies on predicted high-risk customers
-        """)
+        # 1. **Production Pipeline:** Implement the Random Forest or Logistic Regression model
+        # 2. **Real-time Scoring:** Set up API endpoints for live customer scoring
+        # 3. **Batch Processing:** Schedule regular model updates and customer risk scoring
+        # 4. **Monitoring:** Track model performance and data drift over time
+        # 5. **A/B Testing:** Test intervention strategies on predicted high-risk customers
+        # """)
         
     else:
         st.error("No data available for machine learning analysis.")
